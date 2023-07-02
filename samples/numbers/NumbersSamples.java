@@ -2,7 +2,7 @@ package numbers;
 
 public class NumbersSamples {
 
-    public static void run() {
+    public void run() {
         int weight = 5;
         System.out.println("Weight is: " + weight);
 
