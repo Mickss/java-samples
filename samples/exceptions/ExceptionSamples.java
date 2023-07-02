@@ -5,31 +5,48 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class ExceptionSamples {
-    public static void run() {
+    public void run() {
 
-        int a = 15;
-        int b = 0;
+        writeFileSafely();
+        try {
+            writeFileOptimistic();
+        } catch (IOException e) {
+            System.out.println("Error while writing to file" + e);
+        }
 
         try {
-            System.out.println(divide(10, 0));
-        } catch (ArithmeticException e) {
-            System.out.println("Cannot divide by 0");
-        }
-    }
-    private static int divide(int a, int b) {
-        try {
-            return a/ b;
-        } catch (ArithmeticException c) {
-            System.out.println("Cannot divide by 0");
-            return 0;
+            int result = divide(10, 2);
+            System.out.println("Divide result is: " + result);
+            int result2 = divide(12, 0);
+            System.out.println("Divide result is: " + result2);
+        } catch (Exception e) {
+            System.out.println("Error while dividing" + e);
+            throw new RuntimeException(e);
         }
     }
 
-    public void go () throws IOException {
+    private int divide(int a, int b) {
+        return a / b;
+    }
+
+    private void writeFileSafely() {
 
         File file = new File("file.txt");
 
-        FileWriter writer = new FileWriter(file);
-        writer.write("Its only test");
+        try (FileWriter writer = new FileWriter(file)) {
+            writer.write("Its only test");
+        } catch (IOException e) {
+            System.out.println("Error while writing to file" + e);
+            throw new RuntimeException(e);
+        }
+    }
+
+    private void writeFileOptimistic() throws IOException {
+
+        File file = new File("file2.txt");
+
+        try (FileWriter writer = new FileWriter(file)) {
+            writer.write("Its only test");
+        }
     }
 }
