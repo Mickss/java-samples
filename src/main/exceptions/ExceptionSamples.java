@@ -1,10 +1,14 @@
 package exceptions;
 
+import samples.SamplesRunnable;
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class ExceptionSamples {
+public class ExceptionSamples implements SamplesRunnable {
+
+    @Override
     public void run() {
 
         writeFileSafely();
