@@ -1,3 +1,5 @@
+package samples;
+
 import exceptions.ExceptionSamples;
 import numbers.NumbersSamples;
 
