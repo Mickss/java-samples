@@ -3,14 +3,23 @@ package samples;
 import exceptions.ExceptionSamples;
 import numbers.NumbersSamples;
 
+import java.util.List;
+
 public class SamplesRunner {
 
-    public void run() {
+    List<SamplesRunnable> samples = List.of(
+            new NumbersSamples(),
+            new ExceptionSamples()
+    );
 
-        NumbersSamples numbersSamples = new NumbersSamples();
-        numbersSamples.run();
+    public void initSamples() {
 
-        ExceptionSamples exceptionSamples = new ExceptionSamples();
-        exceptionSamples.run();
+        for (SamplesRunnable sample : samples) {
+            try {
+                sample.run();
+            } catch (Exception e) {
+                System.out.println("Example ended with exception: " + e);
+            }
+        }
     }
 }

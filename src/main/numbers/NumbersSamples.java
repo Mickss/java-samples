@@ -1,7 +1,10 @@
 package numbers;
 
-public class NumbersSamples {
+import samples.SamplesRunnable;
 
+public class NumbersSamples implements SamplesRunnable {
+
+    @Override
     public void run() {
         int weight = 5;
         System.out.println("Weight is: " + weight);
