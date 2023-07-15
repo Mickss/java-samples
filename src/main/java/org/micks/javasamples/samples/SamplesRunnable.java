@@ -1,4 +1,4 @@
-package samples;
+package org.micks.javasamples.samples;
 
 public interface SamplesRunnable {
 

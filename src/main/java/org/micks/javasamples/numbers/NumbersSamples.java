@@ -1,6 +1,6 @@
-package numbers;
+package org.micks.javasamples.numbers;
 
-import samples.SamplesRunnable;
+import org.micks.javasamples.samples.SamplesRunnable;
 
 public class NumbersSamples implements SamplesRunnable {
 
