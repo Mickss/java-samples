@@ -1,7 +1,9 @@
-package samples;
+package org.micks.javasamples.samples;
 
-import exceptions.ExceptionSamples;
-import numbers.NumbersSamples;
+import org.micks.javasamples.exceptions.ExceptionSamples;
+import org.micks.javasamples.numbers.NumbersSamples;
+import org.micks.javasamples.threads.ExecutorServiceSamples;
+import org.micks.javasamples.threads.ThreadsSamples;
 
 import java.util.List;
 
@@ -9,7 +11,9 @@ public class SamplesRunner {
 
     List<SamplesRunnable> samples = List.of(
             new NumbersSamples(),
-            new ExceptionSamples()
+            new ExceptionSamples(),
+            new ThreadsSamples(),
+            new ExecutorServiceSamples()
     );
 
     public void initSamples() {

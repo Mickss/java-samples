@@ -1,6 +1,6 @@
-package exceptions;
+package org.micks.javasamples.exceptions;
 
-import samples.SamplesRunnable;
+import org.micks.javasamples.samples.SamplesRunnable;
 
 import java.io.File;
 import java.io.FileWriter;
