@@ -1,6 +1,7 @@
 package org.micks.javasamples.samples;
 
 import org.micks.javasamples.exceptions.ExceptionSamples;
+import org.micks.javasamples.lists.ListsSamples;
 import org.micks.javasamples.numbers.NumbersSamples;
 import org.micks.javasamples.threads.ExecutorServiceSamples;
 import org.micks.javasamples.threads.ThreadsSamples;
@@ -13,7 +14,8 @@ public class SamplesRunner {
             new NumbersSamples(),
             new ExceptionSamples(),
             new ThreadsSamples(),
-            new ExecutorServiceSamples()
+            new ExecutorServiceSamples(),
+            new ListsSamples()
     );
 
     public void initSamples() {
