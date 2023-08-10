@@ -33,5 +33,4 @@ public class ThreadsSamples implements SamplesRunnable {
             }
         }
     }
-
 }
